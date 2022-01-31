@@ -10,12 +10,16 @@ export default function Counter() {
       setCount(count * value);
     }
   };
+  const ResetCount =()=>{
+    setCount(count*0)
+  }
   return (
     <div className="App">
       <h1>Counter : {count}</h1>
       <button onClick={() => set(1)}>Increase</button>
       <button onClick={() => set(-1)}>Decrease</button>
       <button onClick={() => set(2)}>Double</button>
+      <button onClick={() => ResetCount()}>Reset</button>
     </div>
   );
 }
